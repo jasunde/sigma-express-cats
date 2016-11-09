@@ -1,16 +1,23 @@
 // Require all the things
-var path = require('path')
 var bodyParser = require('body-parser')
 var express = require('express')
 var app = express();
+var index = require('./routes/index')
+var cats = require('./routes/cats')
 
+// Set port
 app.set('port', process.env.PORT || 3000)
 
-app.get('/*', function (req, res) {
-  var file = req.params[0] || 'views/index.html'
-  res.sendFile(path.join(__dirname, './public/', file))
-})
+// Parse the body
+app.use(bodyParser.urlencoded({extended: false}))
 
+// Route the cats
+app.use('/cats', cats)
+
+// Route static files
+app.use('/', index)
+
+// Listen for requests
 app.listen(app.get('port'), function() {
   console.log('Listening on port ' + app.get('port'))
 })
