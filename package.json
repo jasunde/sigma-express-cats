@@ -1,0 +1,26 @@
+{
+  "name": "sigma-express-cats",
+  "version": "1.0.0",
+  "description": "express lecture regarding cats",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kdszafranski/sigma-express-cats.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kdszafranski/sigma-express-cats/issues"
+  },
+  "homepage": "https://github.com/kdszafranski/sigma-express-cats#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "bootstrap": "^3.3.7",
+    "express": "^4.14.0",
+    "jquery": "^3.1.1"
+  }
+}
